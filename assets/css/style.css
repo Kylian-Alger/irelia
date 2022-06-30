@@ -1,0 +1,293 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/highNoonBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.);
+    border-bottom: 1px solid rgba(194, 150, 89, 0.300);
+}
+
+.header h1{
+    width: 50%;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.rightHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link{
+    width: 350px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    font-size: 16px;
+
+}
+
+.menuBurger{
+    padding: 35px;
+    border-left: 1px solid rgba(194, 150, 89, 0.300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 93px);
+}
+
+.leftButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 255px;
+    height: 200px;
+    /* background-color: cornflowerblue; */
+    top: 300px;
+    left: 30px;
+}
+
+
+.overView{
+    display: flex;
+}
+
+.builds{
+    display: flex;
+}
+
+.losange{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #c9a259 ;
+    transform: rotate(45deg);
+}
+
+.losange p{
+    transform: rotate(-45deg);
+}
+
+.skin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.leftExplication{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 170px;
+    /* background-color: yellow; */
+    top: 600px;
+    left: 130px;
+}
+
+.under{
+    display: flex;
+}
+.presentation{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+    top: 530px;
+    left: 130px;
+}
+
+.title{
+    font-size: 18px;
+    color: #c9a259;
+}
+
+.description{
+    font-size: 14px;
+}
+
+
+.role{
+    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 195px;
+    height: 50px;
+    left: 130px;
+    top: 670px;
+}
+
+/* .difficulty{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 195px;
+    height: 25px;
+    top: 670px;
+    left: 325px;
+} */
+
+.power{
+    /* position: absolute; */
+    display: flex;
+    align-items: center;
+    /* background-color: #e91e63; */
+    height: 100%;
+    top: 695px;
+    width: 195px;
+    height: 25px;
+    left: 325px;
+}
+
+/* .powersCategory{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkviolet;
+    height: 100%;
+    width: 120px;
+    height: 100%;
+} */
+
+.powerScale{
+    width: 35px;
+    height: 6px;
+    background-color: #c9a259;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.powerScaleDiff{
+    background-color: #FFFFFF;
+}
+
+.titleName{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: 64px;
+    bottom: 0px;
+    border-right: 1px solid #c9a259;
+    border-left: 1px solid #c9a259;
+    border-top: 1px solid #c9a259;
+}
+
+.titleSkinName{
+    font-size: 18px;
+    padding-top: 50px;
+}
+
+.name{
+    padding-top: 25px;
+    font-size: 200px;
+}
+
+.ireliaSkin {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    /* border: 1px red solid; */
+    /* width: 546px; */
+    overflow: hidden;
+}
+
+.ireliaSkin img{
+    width: 750px;
+    height: auto;
+}
+
+.skillContent{
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 380px;
+    height: 450px;
+    right: 30px;
+    top: 200px;
+}
+
+.skillVideo{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.skillPower{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: darkgray; */
+    height: 100%;
+}
+
+.ireliaSkill{
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ult{
+    background-image: url(../images/ireliaUlti.png);
+}
+
+.firstPower{
+    background-image:url(../images/ireliaFirstPower.png);
+}
+
+.secondPower{
+    background-image: url(../images/ireliaSecondPower.png);
+}
+
+.thirdPower{
+    background-image: url(../images/ireliaThirdPower.png);
+}
+
+.passive{
+    background-image: url(../images/ireliaPassive.png);
+}
+
+.recall{
+    background-image: url(../images/recall.png);
+}
+
+
