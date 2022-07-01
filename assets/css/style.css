@@ -1,10 +1,11 @@
+@keyframes Rotation {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/highNoonBackground.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 body::-webkit-scrollbar {
@@ -12,13 +13,19 @@ body::-webkit-scrollbar {
 }
 
 
+/* HIGH NOON */
+
 .header{
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.);
+    background-color: #00000080;
     border-bottom: 1px solid rgba(194, 150, 89, 0.300);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
 .header h1{
@@ -43,7 +50,7 @@ body::-webkit-scrollbar {
 
 }
 
-.menuBurger{
+.sound{
     padding: 35px;
     border-left: 1px solid rgba(194, 150, 89, 0.300);
     display: flex;
@@ -51,10 +58,48 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
-.container{
+.sound img{
+    width: 25px;
+    height: 25px;
+}
+
+.hidden{
+    display: none;
+}
+
+.highNoon{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/highNoonBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container1{
     position: relative;
     width: 100%;
-    height: calc(100vh - 93px);
+    height: 100vh;
+}
+
+.container2{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-color: #0e6755;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/SentinelBackground3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container3{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-color: #0e6755;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/ionia1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .leftButtons{
@@ -63,22 +108,27 @@ body::-webkit-scrollbar {
     justify-content: space-between;
     position: absolute;
     width: 255px;
-    height: 200px;
-    /* background-color: cornflowerblue; */
-    top: 300px;
+    top: calc(50vh - 100px);
     left: 30px;
 }
 
 
-.overView{
+.hg{
     display: flex;
+    padding-bottom: 15px;
 }
 
-.builds{
+.senti{
     display: flex;
+    padding-bottom: 15px;
 }
 
-.losange{
+.divine{
+    display: flex;
+    padding-bottom: 15px;
+}
+
+.losangeHighNoon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,7 +138,7 @@ body::-webkit-scrollbar {
     transform: rotate(45deg);
 }
 
-.losange p{
+.losangeHighNoon p{
     transform: rotate(-45deg);
 }
 
@@ -96,8 +146,8 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 20px;
-    font-size: 14px;
+    padding-left: 16px;
+    font-size: 12px;
 }
 
 .leftExplication{
@@ -105,17 +155,30 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 350px;
     height: 170px;
-    /* background-color: yellow; */
-    top: 600px;
+    bottom: calc(25vh - 85px);
     left: 130px;
 }
+
 
 .under{
     display: flex;
 }
-.presentation{
+
+.chromaColor{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.circleColor{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: saddlebrown;
+}
+
+.presentationHighNoon{
     /* position: absolute; */
     display: flex;
     flex-direction: column;
@@ -125,13 +188,14 @@ body::-webkit-scrollbar {
     left: 130px;
 }
 
-.title{
+.titleHighNoon{
     font-size: 18px;
     color: #c9a259;
 }
 
 .description{
     font-size: 14px;
+    margin-top: 10px;
 }
 
 
@@ -189,14 +253,14 @@ body::-webkit-scrollbar {
     background-color: #FFFFFF;
 }
 
-.titleName{
+.midContentHighNoon{
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 400px;
     left: calc(50% - 200px);
-    top: 64px;
+    top: 130px;
     bottom: 0px;
     border-right: 1px solid #c9a259;
     border-left: 1px solid #c9a259;
@@ -213,7 +277,7 @@ body::-webkit-scrollbar {
     font-size: 200px;
 }
 
-.ireliaSkin {
+.ireliaSkinHighNoon {
     display: flex;
     align-items: center;
     position: absolute;
@@ -223,9 +287,21 @@ body::-webkit-scrollbar {
     overflow: hidden;
 }
 
-.ireliaSkin img{
+.ireliaSkinHighNoon img{
     width: 750px;
     height: auto;
+}
+
+.imageAndButton{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: 64px;
+    bottom: 0px;
+    overflow: hidden;
 }
 
 .skillContent{
@@ -234,30 +310,53 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: space-between;
     position: absolute;
-    width: 380px;
+    width: 450px;
     height: 450px;
     right: 30px;
-    top: 200px;
+    top: calc(50vh - 225px);;
+
 }
 
-.skillVideo{
+.skillVideoHighNoon{
+    position: absolute;
     display: flex;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 100%;
+    border: 1px solid #cfa75c;
+    overflow: hidden;
+    width: 240px;
+    height: 240px;
+}
+
+.circleContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 250px;
     height: 250px;
-    background-color: yellow;
-    border-radius: 50%;
 }
 
+.skillDashedBorderHighNoon{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 3px dotted #5c482c;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
 .skillPower{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     /* background-color: darkgray; */
-    height: 100%;
+    height: 380px;
 }
 
-.ireliaSkill{
-    border: 1px solid #FFFFFF;
+.ireliaSkillHighNoon{
+    border: 2px solid #cfa75c;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -290,4 +389,285 @@ body::-webkit-scrollbar {
     background-image: url(../images/recall.png);
 }
 
+.linearGradientTop{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 90px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 100%);
+}
 
+.linearGradientBot{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 90px;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);
+}
+
+.downButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+}
+
+.downCircleHighNoon{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px dotted #5c482c;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.downArrowHighNoon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #121418;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #cfa75c;
+}
+
+.downArrowHighNoon img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+/* SENTINEL PART */
+
+.ireliaSkinSentinel {
+    overflow: hidden;
+}
+
+.ireliaSkinSentinel img{
+    width: 450px;
+    bottom: 0;
+    right: 1px;
+    position: absolute;
+}
+
+.titleSentinel{
+    font-size: 18px;
+    color: #0e6755;
+}
+
+.losangeSentinel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #0e6755 ;
+    transform: rotate(45deg);
+}
+
+.losangeSentinel p{
+    transform: rotate(-45deg);
+}
+
+.midContentSentinel{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: 130px;
+    bottom: 0px;
+    border-right: 1px solid #0e6755;
+    border-left: 1px solid #0e6755;
+    border-top: 1px solid #0e6755;
+}
+
+.ireliaSkillSentinel{
+    border: 2px solid #0e6755;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.downCircleSentinel{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px dotted #0e6755;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.downArrowSentinel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #121418;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #0e6755;
+}
+
+.downArrowSentinel img{
+    width: 20px;
+    height: 20px;
+    filter: invert(28%) sepia(83%) saturate(390%) hue-rotate(118deg) brightness(97%) contrast(98%);
+}
+
+.skillDashedBorderSentinel{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 3px dotted #0e6755;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.skillVideoSentinel{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 100%;
+    border: 1px solid #0e6755;
+    overflow: hidden;
+    width: 240px;
+    height: 240px;
+}
+
+
+/* Divine PART */
+
+.ireliaSkinDivine {
+    overflow: hidden;
+}
+
+.ireliaSkinDivine img{
+    width: 430px;
+    bottom: 0;
+    right: 0px;
+    position: absolute;
+}
+
+.titleDivine{
+    font-size: 18px;
+    color: #c47191;
+}
+
+.losangeDivine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #c47191;
+    transform: rotate(45deg);
+}
+
+.losangeDivine p{
+    transform: rotate(-45deg);
+}
+
+.midContentDivine{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    left: calc(50% - 200px);
+    top: 130px;
+    bottom: 0px;
+    border-right: 1px solid #c47191;
+    border-left: 1px solid #c47191;
+    border-top: 1px solid #c47191;
+}
+
+.ireliaSkillDivine{
+    border: 2px solid #c47191;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.downCircleDivine{
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px dotted #c47191;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.downArrowDivine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #121418;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #c47191;
+}
+
+.downArrowDivine img{
+    width: 20px;
+    height: 20px;
+}
+
+.skillDashedBorderDivine{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 3px dotted #c47191;
+    animation-name: Rotation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.skillVideoDivine{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: azure;
+    border-radius: 100%;
+    border: 1px solid #c47191;
+    overflow: hidden;
+    width: 240px;
+    height: 240px;
+}
