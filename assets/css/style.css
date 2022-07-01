@@ -56,6 +56,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .sound img{
@@ -136,6 +137,7 @@ body::-webkit-scrollbar {
     height: 35px;
     border: 1px solid #c9a259 ;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .losangeHighNoon p{
@@ -363,6 +365,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 
 .ult{
@@ -440,6 +443,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     border-radius: 100%;
     border: 1px solid #cfa75c;
+    cursor: pointer;
 }
 
 .downArrowHighNoon img{
@@ -476,6 +480,7 @@ body::-webkit-scrollbar {
     height: 35px;
     border: 1px solid #0e6755 ;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .losangeSentinel p{
@@ -504,6 +509,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 
 .downCircleSentinel{
@@ -530,6 +536,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     border-radius: 100%;
     border: 1px solid #0e6755;
+    cursor: pointer;
 }
 
 .downArrowSentinel img{
@@ -588,6 +595,7 @@ body::-webkit-scrollbar {
     height: 35px;
     border: 1px solid #c47191;
     transform: rotate(45deg);
+    cursor: pointer;
 }
 
 .losangeDivine p{
@@ -616,6 +624,7 @@ body::-webkit-scrollbar {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
 }
 
 .downCircleDivine{
@@ -642,6 +651,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     border-radius: 100%;
     border: 1px solid #c47191;
+    cursor: pointer;
 }
 
 .downArrowDivine img{
