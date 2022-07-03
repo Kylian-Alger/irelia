@@ -3,7 +3,7 @@ const audio = new Audio('./assets/audio/ireliaMusic.mp3')
 const on = buttonSound.querySelector('.musicOn')
 const off = buttonSound.querySelector('.musicOff')
 
-audio.volume = 0.1
+audio.volume = 0.5
 audio.pause()
 
 let count = 0
