@@ -1,8 +1,10 @@
+/* Keyframes */
 @keyframes Rotation {
 	0% {transform: rotate(0deg);}
 	100% {transform: rotate(360deg);}
 }
 
+/* All */
 body{
     font-family: 'Poppins', sans-serif;
     color: #FFFFFF;
@@ -12,13 +14,32 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-button{
+a{
     cursor: pointer;
+    text-decoration: none;
 }
 
+/* Fullpage.js */
+/* CIBLE TOUT LES LINKS DE FULLPAGEJS */
+#fp-nav a span:nth-child(2) {
+    transform: rotate(45deg) !important;
+    border-radius: 0px !important;
+    background-color: #000000 !important;
+}
 
-/* HIGH NOON */
+#fp-nav li:nth-child(1) span:nth-child(2) {
+    border:1px solid #c9a259 !important;
+}
 
+#fp-nav li:nth-child(2) span:nth-child(2) {
+    border:1px solid #0e6755 !important;
+}
+
+#fp-nav li:nth-child(3) span:nth-child(2) {
+    border:1px solid #c47191 !important;
+}
+
+/* Header */
 .header{
     display: flex;
     position: fixed;
@@ -26,13 +47,13 @@ button{
     justify-content: space-between;
     width: 100%;
     background-color: #00000080;
-    border-bottom: 1px solid rgba(194, 150, 89, 0.300);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     z-index: 10;
 }
 
-.header h1{
+.header .homePage{
     width: 50%;
     padding-left: 30px;
     font-size: 20px;
@@ -44,19 +65,18 @@ button{
     align-items: center;
 }
 
-.link{
+.links{
     width: 500px;
     height: 100%;
     display: flex;
     justify-content: space-between;
     margin-right: 40px;
     font-size: 16px;
-
 }
 
 .sound{
     padding: 35px;
-    border-left: 1px solid rgba(194, 150, 89, 0.300);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,24 +92,21 @@ button{
     display: none;
 }
 
-.highNoon{
+/* Container */
+.container1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/highNoonBackground.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.container1{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
 .container2{
     position: relative;
     width: 100vw;
     height: 100vh;
-    border-color: #0e6755;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/sentinelBackground3.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -100,7 +117,6 @@ button{
     position: relative;
     width: 100vw;
     height: 100vh;
-    border-color: #0e6755;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/ionia1.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -115,22 +131,6 @@ button{
     width: 255px;
     top: calc(50vh - 100px);
     left: 30px;
-}
-
-
-.hg{
-    display: flex;
-    padding-bottom: 15px;
-}
-
-.senti{
-    display: flex;
-    padding-bottom: 15px;
-}
-
-.divine{
-    display: flex;
-    padding-bottom: 15px;
 }
 
 .losangeHighNoon{
@@ -167,7 +167,6 @@ button{
     left: 130px;
 }
 
-
 .under{
     display: flex;
     margin-top: 30px;
@@ -175,18 +174,21 @@ button{
 
 .chromaColor{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .circleColor{
     width: 25px;
     height: 10px;
     clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
-    background-color: saddlebrown;
+    transition: ease-out 200ms;
+}
+
+.circleColor:hover{
+    transform: scale(1.3);
 }
 
 .presentationHighNoon{
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -205,9 +207,7 @@ button{
     margin-top: 10px;
 }
 
-
 .role{
-    /* position: absolute; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -217,37 +217,15 @@ button{
     top: 670px;
 }
 
-/* .difficulty{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 195px;
-    height: 25px;
-    top: 670px;
-    left: 325px;
-} */
-
 .power{
-    /* position: absolute; */
     display: flex;
     align-items: center;
-    /* background-color: #e91e63; */
     height: 100%;
     top: 695px;
     width: 195px;
     height: 25px;
     left: 325px;
 }
-
-/* .powersCategory{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: darkviolet;
-    height: 100%;
-    width: 120px;
-    height: 100%;
-} */
 
 .powerScale{
     width: 35px;
@@ -289,8 +267,6 @@ button{
     align-items: center;
     position: absolute;
     bottom: 0;
-    /* border: 1px red solid; */
-    /* width: 546px; */
     overflow: hidden;
 }
 
@@ -312,7 +288,6 @@ button{
 }
 
 .skillContent{
-    /* background-color: blue; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -332,21 +307,19 @@ button{
     border-radius: 100%;
     border: 1px solid #cfa75c;
     overflow: hidden;
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
 }
 
 .circleContent{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 250px;
 }
 
 .skillDashedBorderHighNoon{
-    height: 250px;
-    width: 250px;
+    height: 310px;
+    width: 310px;
     border-radius: 100%;
     border: 3px dotted #5c482c;
     animation-name: Rotation;
@@ -358,14 +331,12 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* background-color: darkgray; */
     height: 380px;
 }
 
 .ireliaSkillHighNoon{
     border: 2px solid #cfa75c;
 }
-
 
 .ireliaSkill{
     opacity: 0.5;
@@ -380,6 +351,11 @@ button{
 }
 
 .ireliaSkill:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.activeSkill{
     opacity: 1;
     transform: scale(1.3);
 }
@@ -433,19 +409,11 @@ button{
 
 .obsidian{
     background-color: #414c52;
-
 }
 
 .emerauld{
     background-color: #1d5842;
 }
-
-
-
- /* .chromaColor:nth-child(1){
-    background-color: #cdd3c6;
- } */
-
 
 .linearGradientTop{
     position: absolute;
@@ -477,7 +445,6 @@ button{
 
 .downButton:hover{
     transform: scale(1.1);
-
 }
 
 .downCircleHighNoon{
@@ -512,9 +479,6 @@ button{
     width: 20px;
     height: 20px;
 }
-
-
-
 
 /* SENTINEL PART */
 
@@ -601,8 +565,8 @@ button{
 }
 
 .skillDashedBorderSentinel{
-    height: 250px;
-    width: 250px;
+    height: 310px;
+    width: 310px;
     border-radius: 100%;
     border: 3px dotted #0e6755;
     animation-name: Rotation;
@@ -619,8 +583,8 @@ button{
     border-radius: 100%;
     border: 1px solid #0e6755;
     overflow: hidden;
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
 }
 
 
@@ -708,8 +672,8 @@ button{
 }
 
 .skillDashedBorderDivine{
-    height: 250px;
-    width: 250px;
+    height: 310px;
+    width: 310px;
     border-radius: 100%;
     border: 3px dotted #c47191;
     animation-name: Rotation;
@@ -726,6 +690,6 @@ button{
     border-radius: 100%;
     border: 1px solid #c47191;
     overflow: hidden;
-    width: 240px;
-    height: 240px;
+    width: 300px;
+    height: 300px;
 }
