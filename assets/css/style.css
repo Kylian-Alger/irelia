@@ -59,6 +59,7 @@ a{
     font-size: 20px;
 }
 
+
 .rightHeader{
     display: flex;
     justify-content: space-between;
@@ -73,6 +74,92 @@ a{
     margin-right: 40px;
     font-size: 16px;
 }
+
+.btnHg{
+    position: relative;
+}
+
+.btnSenti{
+    position: relative;
+}
+
+.btnDs{
+    position: relative;
+}
+
+.btnAbout{
+    position: relative
+}
+
+.btnHg::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #c9a259;
+    background: none;
+    width: 0;
+    height: 100%;
+    transition: 350ms;
+}
+
+.btnHg:hover::before{
+    width: 100%;
+}
+
+.btnSenti::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #0e6755;
+    background: none;
+    width: 0;
+    height: 100%;
+    transition: 350ms;
+}
+
+.btnSenti:hover::before{
+    width: 100%;
+}
+
+.btnDs::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #c47191;
+    background: none;
+    width: 0;
+    height: 100%;
+    transition: 350ms;
+}
+
+.btnDs:hover::before{
+    width: 100%;
+}
+
+.btnAbout::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 1px solid #FFFFFF;
+    background: none;
+    width: 0;
+    height: 100%;
+    transition: 350ms;
+}
+
+.btnAbout:hover::before{
+    width: 100%;
+}
+
+
 
 .sound{
     padding: 35px;
@@ -175,6 +262,7 @@ a{
 .chromaColor{
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .circleColor{
@@ -200,11 +288,13 @@ a{
 .titleHighNoon{
     font-size: 18px;
     color: #c9a259;
+    margin-top: 10px;
 }
 
 .description{
     font-size: 14px;
     margin-top: 10px;
+    line-height: 20px;
 }
 
 .role{
@@ -496,6 +586,7 @@ a{
 .titleSentinel{
     font-size: 18px;
     color: #0e6755;
+    margin-top: 10px;
 }
 
 .losangeSentinel{
@@ -604,6 +695,7 @@ a{
 .titleDivine{
     font-size: 18px;
     color: #c47191;
+    margin-top: 10px;
 }
 
 .losangeDivine{
@@ -692,4 +784,80 @@ a{
     overflow: hidden;
     width: 300px;
     height: 300px;
+}
+
+/* ABOUT */
+
+.aboutContainer{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/aboutBackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inspiration{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.inspiration h1{
+    font-size: 32px;
+    position: absolute;
+    top: 25vh;
+    text-decoration: underline;
+}
+
+.inspiration p{
+    font-size: 24px;
+    position: absolute;
+    top: 30vh;
+}
+
+.inspiration a{
+    font-size: 24px;
+    position: absolute;
+    top: 35vh;
+    transition: ease-out 200ms;
+    color: rgb(96, 255, 234);
+}
+
+.inspiration a:hover{
+    transform: scale(1.3);
+    text-decoration: underline;
+}
+
+.developped{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+.developped h1{
+    font-size: 32px;
+    position: absolute;
+    top: 5vh;
+    text-decoration: underline;
+}
+
+.developped p{
+    font-size: 24px;
+    position: absolute;
+    top: 10vh;
+}
+
+.developped a{
+    font-size: 24px;
+    position: absolute;
+    top: 15vh;
+    transition: ease-out 200ms;
+    color: rgb(96, 255, 234);
+}
+
+.developped a:hover{
+    transform: scale(1.3);
+    text-decoration: underline;
 }
